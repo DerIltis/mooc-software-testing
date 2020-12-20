@@ -5,6 +5,7 @@ public class NumFinder {
     private int largest = Integer.MIN_VALUE;
 
     public void find(int[] nums) {
+        Reset();
         if (nums == null) return;
         for(int n : nums) {
 
@@ -16,6 +17,11 @@ public class NumFinder {
         }
     }
 
+    private void Reset()
+    {
+        smallest = Integer.MAX_VALUE;
+        largest = Integer.MIN_VALUE;
+    }
     public int getSmallest () {
         return smallest;
     }
