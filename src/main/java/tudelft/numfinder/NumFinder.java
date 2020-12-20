@@ -5,6 +5,7 @@ public class NumFinder {
     private int largest = Integer.MIN_VALUE;
 
     public void find(int[] nums) {
+        if (nums == null) return;
         for(int n : nums) {
 
             if(n < smallest)
