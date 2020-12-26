@@ -9,10 +9,39 @@ public class MyRomanNumeralTest {
 
 
     @Test
-    public void singleNumber() throws OperationNotSupportedException {
+    public void singleNumber1() throws OperationNotSupportedException {
         MyRomanNumeral roman = new MyRomanNumeral();
         int result = roman.convert("I");
         Assertions.assertEquals(1, result);
+    }
+
+    @Test
+    public void singleNumber2() throws OperationNotSupportedException {
+        MyRomanNumeral roman = new MyRomanNumeral();
+        int result = roman.convert("V");
+        Assertions.assertEquals(5, result);
+    }
+
+    @Test
+    public void manyNumber1() throws OperationNotSupportedException {
+        MyRomanNumeral roman = new MyRomanNumeral();
+        int result = roman.convert("III");
+        Assertions.assertEquals(3, result);
+    }
+
+    @Test
+    public void manyNumber2() throws OperationNotSupportedException {
+        MyRomanNumeral roman = new MyRomanNumeral();
+        int result = roman.convert("XX");
+        Assertions.assertEquals(20, result);
+    }
+
+    @Test
+    public void tooManyNumbers() throws OperationNotSupportedException {
+        // TODO: This should be invalid!
+        MyRomanNumeral roman = new MyRomanNumeral();
+        int result = roman.convert("IIII");
+        Assertions.assertEquals(4, result);
     }
 
     @Test
@@ -42,6 +71,7 @@ public class MyRomanNumeralTest {
         int result = roman.convert("XCIV");
         Assertions.assertEquals(94, result);
     }
+
     @Test
     public void invalidCharInNumeralArgument(){
         MyRomanNumeral roman = new MyRomanNumeral();
@@ -55,6 +85,8 @@ public class MyRomanNumeralTest {
 
         Assertions.assertThrows(OperationNotSupportedException.class, () -> { int result = roman.convert("VV");});
     }
+
+
 
     @Test
     public void invalidOrderInNumeralArgument2(){
