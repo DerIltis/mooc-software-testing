@@ -13,7 +13,13 @@ public class BlackJackLineCoverageTest {
 
     @Test
     public void leftPlayerWins() {
-        int result = new BlackJack().play(10, 9);
+        int result = new BlackJack().play(10, 22);
+        Assertions.assertEquals(10, result);
+    }
+
+    @Test
+    public void rightPlayerWins() {
+        int result = new BlackJack().play(22, 10);
         Assertions.assertEquals(10, result);
     }
 }

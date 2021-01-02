@@ -8,7 +8,8 @@ public class InvoiceDao {
 
     private static Connection c;
 
-    public void InvoiceDao() {
+    public InvoiceDao() {
+        int x = 4;
         try {
             if(c!=null) return;
 

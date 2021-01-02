@@ -18,7 +18,7 @@ public class CountLettersTest {
     }
 
     @Test
-    public void firstlastWordDoesNotMatch() {
+    public void firstWordDoesNotMatch() {
         int words = new CountLetters().count("cat|cdr");
         Assertions.assertEquals(1, words);
     }
