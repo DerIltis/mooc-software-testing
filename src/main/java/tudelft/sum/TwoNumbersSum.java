@@ -25,6 +25,11 @@ class TwoNumbersSum {
             result.add(i, total);
         }
 
+        if (complement > 0)
+        {
+            assert complement == 1;
+            result.add(1);
+        }
         Collections.reverse(result);
         return result;
     }
